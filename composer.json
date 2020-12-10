@@ -1,0 +1,40 @@
+{
+    "name": "yuk1/laravel-bref-websockets",
+    "description": ":package_description",
+    "license": "license",
+    "authors": [
+        {
+            "name": "YuK1Game",
+            "email": "develop@yuk1.jp"
+        }
+    ],
+    "homepage": "https://github.com/yuk1game/laravel-bref-websockets",
+    "keywords": ["Laravel", "Bref", "WebSockets"],
+    "require": {
+        "illuminate/support": "~7|~8"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~9.0",
+        "orchestra/testbench": "~5|~6"
+    },
+    "autoload": {
+        "psr-4": {
+            "Yuk1\\LaravelBrefWebsockets\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Yuk1\\LaravelBrefWebsockets\\Tests\\": "tests"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Yuk1\\LaravelBrefWebsockets\\WebsocketsServiceProvider"
+            ],
+            "aliases": {
+                "LaravelBrefWebsockets": "Yuk1\\LaravelBrefWebsockets\\Facades\\Websockets"
+            }
+        }
+    }
+}
