@@ -4,6 +4,8 @@ namespace Yuk1\LaravelBrefWebsockets;
 
 use Illuminate\Support\ServiceProvider;
 
+use ConnectionPool\ConnectionPool;
+
 class WebsocketsServiceProvider extends ServiceProvider
 {
     /**
@@ -37,6 +39,8 @@ class WebsocketsServiceProvider extends ServiceProvider
         $this->app->singleton('websockets', function ($app) {
             return new Websockets;
         });
+
+        $this->app->bind(ConnectionPool::class);
     }
 
     /**

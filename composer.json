@@ -1,6 +1,6 @@
 {
     "name": "yuk1/laravel-bref-websockets",
-    "description": ":package_description",
+    "description": "Easily build a serverless Websocket server with ApiGateway",
     "license": "license",
     "authors": [
         {
@@ -11,6 +11,7 @@
     "homepage": "https://github.com/yuk1game/laravel-bref-websockets",
     "keywords": ["Laravel", "Bref", "WebSockets"],
     "require": {
+        "async-aws/dynamo-db": "~1.0",
         "illuminate/support": "~7|~8"
     },
     "require-dev": {
@@ -36,5 +37,10 @@
                 "LaravelBrefWebsockets": "Yuk1\\LaravelBrefWebsockets\\Facades\\Websockets"
             }
         }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test:win": "vendor\\bin\\phpunit.bat",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
     }
 }
